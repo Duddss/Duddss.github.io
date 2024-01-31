@@ -91,6 +91,10 @@ document.querySelector('#register-btn').addEventListener('click', () => {
                 },
                 hideClass: {
                     popup: 'animate__animated animate__fadeOutUp'
+                },
+                
+                customClass: {
+                    popup: "popup-cadastro"
                 }
 
             })
