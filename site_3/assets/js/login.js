@@ -25,7 +25,10 @@ class Conta {
             title: 'login aprovado, você sera redirecionado(a) a tela inicial',
             showConfirmButton: false,
             timer: 1500,
-            confirmButtonColor: "#DD6B55"
+            confirmButtonColor: "#DD6B55",
+            customClass: {
+                popup: "popup-login"
+            }
         })
         localStorage.setItem('userLogado', email)
 
