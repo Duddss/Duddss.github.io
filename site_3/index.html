@@ -4,7 +4,8 @@
 <head>
 <script>
 window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
+dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
     event: "remove_from_cart",
     ecommerce: {
         currency: "USD",
