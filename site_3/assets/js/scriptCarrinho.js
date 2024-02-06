@@ -410,9 +410,7 @@ btnFinalizarCompras.addEventListener("click", function () {
     text: 'Aguarde o processamento do pagamento',
     confirmButtonColor: "#18C139",
     icon: 'success',
-    customClass:{
-    popup: "popup-compra"
-    }
+    customClass:'popup-compra'
   })
 })
 
