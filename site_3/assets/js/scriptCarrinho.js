@@ -414,6 +414,7 @@ btnFinalizarCompras.addEventListener("click", function () {
     popup: "popup-compra"
     }
   })
+})
 
 const removerFromCart = id => {
   let idUserLogado = getIdUser()
