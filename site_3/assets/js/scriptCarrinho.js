@@ -413,14 +413,7 @@ btnFinalizarCompras.addEventListener("click", function () {
     customClass:{
     popup: "popup-compra"
     }
-    window.dataLayer.push({
-      'event':'Compra',
-      'id_produto':'1',
-      'produto_preco':'290',
-      'produto_descricao':'controle Xbox',
-      'quantidade_produto':'1'});
   })
-})
 
 const removerFromCart = id => {
   let idUserLogado = getIdUser()
