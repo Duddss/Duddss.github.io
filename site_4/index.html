@@ -9,7 +9,6 @@
 <html lang="en">
 
 <head>
-	<script src="js/custom.js"></script>
 	<!-- Google Tag Manager -->
 	<script>(function (w, d, s, l, i) {
 			w[l] = w[l] || []; w[l].push({
@@ -73,7 +72,8 @@
 
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 					<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-					<li><a onclick="viewCart()" class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+					<li><a id="btn-cart" class="nav-link" href="cart.html" onclick="viewCart()"><img
+								src="images/cart.svg"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -597,6 +597,7 @@
 	<!-- End Footer Section -->
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/tiny-slider.js"></script>
+	<script src="js/custom.js"></script>
 
 </body>
 
