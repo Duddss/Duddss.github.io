@@ -69,10 +69,12 @@
 	};
 	sitePlusMinus();
 
+
 })()
 
+document.getElementById("btn-cart").addEventListener("click", viewCart());
+
 var viewCart = function () {
-	console.log("Funcionou")
 	dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
 	dataLayer.push({
 		event: "view_cart",
@@ -107,4 +109,3 @@ var viewCart = function () {
 		}
 	});
 }
-
