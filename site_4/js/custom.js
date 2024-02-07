@@ -71,3 +71,12 @@
 
 
 })()
+
+function cupom() {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'applyCupom',
+		cupom_id: 'EDUARDO20',
+		discount: '20%'
+	})
+}
