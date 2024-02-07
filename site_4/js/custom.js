@@ -71,9 +71,3 @@
 
 
 })()
-
-function teste() {
-	window.dataLayer.push({
-		'event': 'teste'
-	})
-}
