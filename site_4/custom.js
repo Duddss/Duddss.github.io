@@ -69,5 +69,42 @@
 	};
 	sitePlusMinus();
 
-
 })()
+
+var viewCart = function () {
+	console.log("Funcionou")
+	dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+	dataLayer.push({
+		event: "view_cart",
+		ecommerce: {
+			currency: "USD",
+			value: 7.77,
+			items: [
+				{
+					item_id: "SKU_12345",
+					item_name: "Product 1",
+					affiliation: "Furni Fur",
+					item_brand: "Furni",
+					item_category: "Furniture",
+					item_variant: "White",
+					location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+					price: 49.00,
+					quantity: 1
+				},
+
+				{
+					item_id: "SKU_54321",
+					item_name: "Product 2",
+					affiliation: "Furni Fur",
+					item_brand: "Furni",
+					item_category: "Furniture",
+					item_variant: "White",
+					location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+					price: 49.00,
+					quantity: 1
+				}
+			]
+		}
+	});
+}
+
