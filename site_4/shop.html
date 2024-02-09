@@ -48,6 +48,29 @@
 			page_location: 'https://duddss.github.io/site_4/shop.html'
 		})
 	</script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push({
+			event: 'view_item_list',
+			ecommerce: {
+				currency: "USD",
+				value: 7.77,
+				items: [
+					{
+						item_id: "SKU_12345",
+						item_name: "Product 1",
+						affiliation: "Furni Fur",
+						item_brand: "Furni",
+						item_category: "Furniture",
+						item_variant: "White",
+						location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+						price: 49.00,
+						quantity: 1
+					}
+				]
+			}
+		})
+	</script>
 	<!-- Start Header/Navigation -->
 	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
@@ -334,9 +357,9 @@
 	<!-- End Footer Section -->
 
 
+	<script src="js/custom.js"></script>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/tiny-slider.js"></script>
-	<script src="js/custom.js"></script>
 </body>
 
 </html>
