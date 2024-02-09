@@ -72,6 +72,7 @@
 
 })()
 
+
 function cupom() {
 	window.dataLayer = window.dataLayer || [];
 	window.dataLayer.push({
@@ -79,4 +80,52 @@ function cupom() {
 		cupom_id: 'EDUARDO20',
 		discount: '20%'
 	})
+}
+
+function addtoCart() {
+	window.dataLayer = window.dataLayer || [];
+	dataLayer.push({
+		event: "add_to_cart",
+		ecommerce: {
+			currency: "USD",
+			value: 7.77,
+			items: [
+				{
+					item_id: "SKU_12345",
+					item_name: "Product 1",
+					affiliation: "Furni Fur",
+					item_brand: "Furni",
+					item_category: "Furniture",
+					item_variant: "White",
+					location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+					price: 49.00,
+					quantity: 1
+				}
+			]
+		}
+	});
+}
+
+function removefromCart() {
+	window.dataLayer = window.dataLayer || [];
+	dataLayer.push({
+		event: "add_from_cart",
+		ecommerce: {
+			currency: "USD",
+			value: 7.77,
+			items: [
+				{
+					item_id: "SKU_12345",
+					item_name: "Product 1",
+					affiliation: "Furni Fur",
+					item_brand: "Furni",
+					item_category: "Furniture",
+					item_variant: "White",
+					location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+					price: 49.00,
+					quantity: 1
+				}
+			]
+		}
+	});
 }
