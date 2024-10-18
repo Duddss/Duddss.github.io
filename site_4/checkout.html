@@ -35,47 +35,11 @@
 	<title>Checkout</title>
 </head>
 
-<body onload="pageviewCheckout()">
+<body onload="pageviewCheckout(), begincheckout()">
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL7MSF78" height="0" width="0"
 			style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		dataLayer.push({
-			event: "Begin_checkout",
-			ecommerce: {
-				currency: "USD",
-				value: 7.77,
-				items: [
-					{
-						item_id: "SKU_12345",
-						item_name: "Product 1",
-						affiliation: "Furni Fur",
-						item_brand: "Furni",
-						item_category: "Furniture",
-						item_variant: "White",
-						location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-						price: 49.00,
-						quantity: 1
-					},
-
-					{
-						item_id: "SKU_54321",
-						item_name: "Product 2",
-						affiliation: "Furni Fur",
-						item_brand: "Furni",
-						item_category: "Furniture",
-						item_variant: "White",
-						location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-						price: 49.00,
-						quantity: 1
-					}
-				]
-			}
-		});
-	</script>
 	<!-- Start Header/Navigation -->
 	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
@@ -98,7 +62,6 @@
 					<li><a class="nav-link" href="blog.html">Blog</a></li>
 					<li><a class="nav-link" href="contact.html">Contact us</a></li>
 				</ul>
-
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 					<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
 					<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
