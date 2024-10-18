@@ -35,19 +35,12 @@
 	<title>Cart</title>
 </head>
 
-<body>
+<body onload="pageviewCart()">
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL7MSF78" height="0" width="0"
 			style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		window.dataLayer.push({
-			event: 'pageView',
-			page_title: 'Cart',
-			page_location: 'https://duddss.github.io/site_4/cart.html'
-		})
-	</script>
+
 	<!-- Start Header/Navigation -->
 	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
@@ -168,20 +161,20 @@
 										<div class="input-group mb-3 d-flex align-items-center quantity-container"
 											style="max-width: 120px;">
 											<div class="input-group-prepend">
-												<button class="btn btn-outline-black decrease" type="button"
-													onclick="removefromCart()">&minus;</button>
+												<button class="btn btn-outline-black decrease"
+													type="button">&minus;</button>
 											</div>
 											<input type="text" class="form-control text-center quantity-amount"
 												value="1" placeholder="" aria-label="Example text with button addon"
 												aria-describedby="button-addon1">
 											<div class="input-group-append">
 												<button class="btn btn-outline-black increase" type="button"
-													id="btn-plus" onclick="addtoCart()">&plus;</button>
+													id="btn-plus">&plus;</button>
 											</div>
 										</div>
 									</td>
 									<td>$49.00</td>
-									<td><a href="#" class="btn btn-black btn-sm">X</a></td>
+									<td><a href="#" class="btn btn-black btn-sm" onclick="removefromCart()">X</a></td>
 								</tr>
 
 								<tr>
@@ -204,13 +197,13 @@
 												aria-describedby="button-addon1">
 											<div class="input-group-append">
 												<button class="btn btn-outline-black increase" type="button"
-													id="btn-plus2" onclick="addtoCart()">&plus;</button>
+													id="btn-plus2">&plus;</button>
 											</div>
 										</div>
 
 									</td>
 									<td>$49.00</td>
-									<td><a href="#" class="btn btn-black btn-sm">X</a></td>
+									<td><a href="#" class="btn btn-black btn-sm" onclick="removefromCart()">X</a></td>
 								</tr>
 							</tbody>
 						</table>

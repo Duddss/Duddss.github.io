@@ -35,58 +35,11 @@
 	<title>Thankyou</title>
 </head>
 
-<body>
+<body onload="pageviewPurchase(), purchase()">
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KL7MSF78" height="0" width="0"
 			style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		window.dataLayer.push({
-			event: 'pageView',
-			page_title: 'Thankyou',
-			page_location: 'https://duddss.github.io/site_4/thankyou.html'
-		})
-	</script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		dataLayer.push({
-			event: "purchase",
-			ecommerce: {
-				currency: "USD",
-				value: 7.77,
-				cupom: "EDUARDO20",
-				discount: "20%",
-				payment_method: "Credit Card",
-				transaction_id: "4719824",
-				items: [
-					{
-						item_id: "SKU_12345",
-						item_name: "Product 1",
-						affiliation: "Furni Fur",
-						item_brand: "Furni",
-						item_category: "Furniture",
-						item_variant: "White",
-						location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-						price: 49.00,
-						quantity: 1
-					},
-
-					{
-						item_id: "SKU_54321",
-						item_name: "Product 2",
-						affiliation: "Furni Fur",
-						item_brand: "Furni",
-						item_category: "Furniture",
-						item_variant: "White",
-						location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
-						price: 49.00,
-						quantity: 1
-					}
-				]
-			}
-		});
-	</script>
 	<!-- Start Header/Navigation -->
 	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 

@@ -109,7 +109,7 @@ function addtoCart() {
 function removefromCart() {
 	window.dataLayer = window.dataLayer || [];
 	dataLayer.push({
-		event: "add_from_cart",
+		event: "remove_from_cart",
 		ecommerce: {
 			currency: "USD",
 			value: 7.77,
@@ -117,6 +117,151 @@ function removefromCart() {
 				{
 					item_id: "SKU_12345",
 					item_name: "Product 1",
+					affiliation: "Furni Fur",
+					item_brand: "Furni",
+					item_category: "Furniture",
+					item_variant: "White",
+					location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+					price: 49.00,
+					quantity: 1
+				}
+			]
+		}
+	});
+}
+
+function pageviewHome() {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'pageView',
+		page_title: 'Home',
+		page_location: 'https://duddss.github.io/site_4/index.html'
+	})
+}
+
+function pageviewShop() {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'pageView',
+		page_title: 'Shop',
+		page_location: 'https://duddss.github.io/site_4/shop.html'
+	})
+}
+
+function pageviewCart() {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'pageView',
+		page_title: 'Cart',
+		page_location: 'https://duddss.github.io/site_4/cart.html'
+	})
+}
+
+function pageviewAbout() {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'pageView',
+		page_title: 'About',
+		page_location: 'https://duddss.github.io/site_4/about.html'
+	})
+}
+
+function pageviewBlog() {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'pageView',
+		page_title: 'Blog',
+		page_location: 'https://duddss.github.io/site_4/blog.html'
+	})
+}
+
+function pageviewCheckout() {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'pageView',
+		page_title: 'Checkout',
+		page_location: 'https://duddss.github.io/site_4/checkout.html'
+	})
+}
+
+function pageviewContact() {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'pageView',
+		page_title: 'Contact',
+		page_location: 'https://duddss.github.io/site_4/contact.html'
+	})
+}
+
+function pageviewServices() {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'pageView',
+		page_title: 'Services',
+		page_location: 'https://duddss.github.io/site_4/services.html'
+	})
+}
+
+function pageviewPurchase() {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'pageView',
+		page_title: 'Thankyou',
+		page_location: 'https://duddss.github.io/site_4/thankyou.html'
+	})
+}
+
+function viewitemList() {
+	window.dataLayer = window.dataLayer || [];
+	window.dataLayer.push({
+		event: 'view_item_list',
+		ecommerce: {
+			currency: "USD",
+			value: 7.77,
+			items: [
+				{
+					item_id: "SKU_12345",
+					item_name: "Product 1",
+					affiliation: "Furni Fur",
+					item_brand: "Furni",
+					item_category: "Furniture",
+					item_variant: "White",
+					location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+					price: 49.00,
+					quantity: 1
+				}
+			]
+		}
+	})
+}
+
+function purchase() {
+	window.dataLayer = window.dataLayer || [];
+	dataLayer.push({
+		event: "purchase",
+		ecommerce: {
+			currency: "USD",
+			value: 7.77,
+			cupom: "EDUARDO20",
+			discount: "20%",
+			payment_method: "Credit Card",
+			transaction_id: "4719824",
+			items: [
+				{
+					item_id: "SKU_12345",
+					item_name: "Product 1",
+					affiliation: "Furni Fur",
+					item_brand: "Furni",
+					item_category: "Furniture",
+					item_variant: "White",
+					location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
+					price: 49.00,
+					quantity: 1
+				},
+
+				{
+					item_id: "SKU_54321",
+					item_name: "Product 2",
 					affiliation: "Furni Fur",
 					item_brand: "Furni",
 					item_category: "Furniture",
