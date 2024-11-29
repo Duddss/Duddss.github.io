@@ -19,6 +19,30 @@
 					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
 		})(window, document, 'script', 'dataLayer', 'GTM-T2HK4NZP');</script>
 	<!-- End Google Tag Manager -->
+	<script>
+		function getVisitorId() {
+			let visitorId = localStorage.getItem('visitorId');
+			if (!visitorId) {
+				visitorId = `visitor-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+				localStorage.setItem('visitorId', visitorId);
+			}
+			return visitorId;
+		}
+		const userAgent = navigator.userAgent;
+		customData = {
+			page: {
+				name: 'contact',
+			},
+			site: {
+				brand: 'Furni Fur',
+				versao: '1.0.0',
+			},
+			user: {
+				id: { userAgent },
+				logged: 'false',
+			}
+		}
+	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Untree.co">
@@ -32,14 +56,15 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<link href="css/tiny-slider.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
-	<title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
+	<title>Contact</title>
 </head>
 
-<body>
+<body onload="pageview()">
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T2HK4NZP" height="0" width="0"
 			style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
+
 	<!-- Start Header/Navigation -->
 	<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
@@ -50,22 +75,27 @@
 				aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-
 			<div class="collapse navbar-collapse" id="navbarsFurni">
 				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-					<li class="nav-item">
-						<a class="nav-link" href="index.html">Home</a>
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html" data-gtm-type="click" data-gtm-clicktype="link"
+							data-gtm-name="header" data-gtm-subname="home">Home</a>
 					</li>
-					<li><a class="nav-link" href="shop.html">Shop</a></li>
-					<li><a class="nav-link" href="about.html">About us</a></li>
-					<li><a class="nav-link" href="services.html">Services</a></li>
-					<li><a class="nav-link" href="blog.html">Blog</a></li>
-					<li class="active"><a class="nav-link" href="contact.html">Contact us</a></li>
+					<li><a class="nav-link" href="shop.html" data-gtm-type="click" data-gtm-clicktype="link"
+							data-gtm-name="header" data-gtm-subname="shop">Shop</a></li>
+					<li><a class="nav-link" href="about.html" data-gtm-type="click" data-gtm-clicktype="link"
+							data-gtm-name="header" data-gtm-subname="about">About us</a></li>
+					<li><a class="nav-link" href="services.html" data-gtm-type="click" data-gtm-clicktype="link"
+							data-gtm-name="header" data-gtm-subname="services"">Services</a></li>
+					<li><a class=" nav-link" href="blog.html" data-gtm-type="click" data-gtm-name="header" data-gtm-clicktype="link"
+							data-gtm-subname="blog"">Blog</a></li>
+					<li><a class=" nav-link" href="contact.html" data-gtm-type="click" data-gtm-clicktype="link"
+							data-gtm-name="header" data-gtm-subname="contact"">Contact us</a></li>
 				</ul>
 
-				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+				<ul class=" custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 					<li><a class="nav-link" href="#"><img src="images/user.svg"></a></li>
-					<li><a class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
+					<li><a id="btn-cart" class="nav-link" href="cart.html"><img src="images/cart.svg"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -79,11 +109,16 @@
 			<div class="row justify-content-between">
 				<div class="col-lg-5">
 					<div class="intro-excerpt">
-						<h1>Contact</h1>
+						<h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
 						<p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
 							vulputate velit imperdiet dolor tempor tristique.</p>
-						<p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#"
-								class="btn btn-white-outline">Explore</a></p>
+						<p><a href="#" class="btn btn-secondary me-2 btn-select-content" data-gtm-type="click"
+								data-gtm-clicktype="button" data-gtm-name="modern-interior-design-studio"
+								data-gtm-subname="shop-now">Shop Now</a>
+							<a href="#" class="btn btn-white-outline btn-select-content" data-gtm-type="click"
+								data-gtm-clicktype="button" data-gtm-name="modern-interior-design-studio"
+								data-gtm-subname="explore">Explore</a>
+						</p>
 					</div>
 				</div>
 				<div class="col-lg-7">
@@ -158,7 +193,8 @@
 							</div>
 						</div>
 
-						<form>
+						<form data-gtm-type="form" data-gtm-form="input" data-gtm-name="contact-us"
+							data-gtm-subname="send-message">
 							<div class="row">
 								<div class="col-6">
 									<div class="form-group">
@@ -183,7 +219,9 @@
 								<textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
 							</div>
 
-							<button type="submit" class="btn btn-primary-hover-outline">Send Message</button>
+							<button type="submit" class="btn btn-primary-hover-outline" data-gtm-type="form"
+								data-gtm-clicktype="input" data-gtm-name="contact-form" data-gtm-subname="send-message"
+								onclick="lead(this)">Send Message</button>
 						</form>
 
 					</div>
@@ -253,35 +291,49 @@
 					<div class="row links-wrap">
 						<div class="col-6 col-sm-6 col-md-3">
 							<ul class="list-unstyled">
-								<li><a href="#">About us</a></li>
-								<li><a href="#">Services</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">Contact us</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="about-us">About us</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="services">Services</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="blog">Blog</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="contact-us">Contact us</a></li>
 							</ul>
 						</div>
 
 						<div class="col-6 col-sm-6 col-md-3">
 							<ul class="list-unstyled">
-								<li><a href="#">Support</a></li>
-								<li><a href="#">Knowledge base</a></li>
-								<li><a href="#">Live chat</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="support">Support</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="Knowledge-base">Knowledge base</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="live-chat">Live chat</a></li>
 							</ul>
 						</div>
 
 						<div class="col-6 col-sm-6 col-md-3">
 							<ul class="list-unstyled">
-								<li><a href="#">Jobs</a></li>
-								<li><a href="#">Our team</a></li>
-								<li><a href="#">Leadership</a></li>
-								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="jobs">Jobs</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="our-team">Our team</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="leadership">Leadership</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="privacy-policy">Privacy Policy</a></li>
 							</ul>
 						</div>
 
 						<div class="col-6 col-sm-6 col-md-3">
 							<ul class="list-unstyled">
-								<li><a href="#">Nordic Chair</a></li>
-								<li><a href="#">Kruzo Aero</a></li>
-								<li><a href="#">Ergonomic Chair</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="nordic-chair">Nordic Chair</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="kruzo-aero-chair">Kruzo Aero</a></li>
+								<li><a href="#" data-gtm-type="click" data-gtm-clicktype="link" data-gtm-name="footer"
+										data-gtm-subname="ergonomic-chair">Ergonomic Chair</a></li>
 							</ul>
 						</div>
 					</div>
