@@ -88,6 +88,7 @@ function cupom(element) {
 
 function addtoCart(element) {
 	var subName = element.getAttribute('data-gtm-subname');
+	dataLayer.push({ ecommerce: null });
 	window.dataLayer = window.dataLayer || [];
 	dataLayer.push({
 		event: "add_to_cart",
@@ -109,6 +110,7 @@ function addtoCart(element) {
 }
 
 function removefromCart() {
+	dataLayer.push({ ecommerce: null });
 	window.dataLayer = window.dataLayer || [];
 	dataLayer.push({
 		event: "remove_from_cart",
@@ -130,6 +132,7 @@ function removefromCart() {
 }
 
 function viewitemList() {
+	dataLayer.push({ ecommerce: null });
 	window.dataLayer = window.dataLayer || [];
 	window.dataLayer.push({
 		event: 'view_item_list',
@@ -150,17 +153,25 @@ function viewitemList() {
 	})
 }
 
+
+
+
 function purchase() {
+	const length = 12; // Define o comprimento do ID
+	let transactionId = '';
+	for (let i = 0; i < length; i++) {
+		transactionId += Math.floor(Math.random() * 10); // Adiciona um número aleatório de 0 a 9
+	}
+	dataLayer.push({ ecommerce: null });
 	window.dataLayer = window.dataLayer || [];
 	window.dataLayer.push({
 		event: "purchase",
 		ecommerce: {
 			currency: "BRL",
-			cupom: "EDUARDO20",
-			discount: 20,
-			payment_method: "Credit Card",
-			transaction_id: "4719824",
-			revenue: 350.00,
+			coupon: "EDUARDO20",
+			payment_type: "Credit Card",
+			transaction_id: transactionId,
+			value: 350.00,
 			items: [
 				{
 					item_id: "SKU_12345",
@@ -169,6 +180,7 @@ function purchase() {
 					item_category: "Furniture",
 					item_variant: "White",
 					price: 49.00,
+					discount: 2.22,
 					quantity: 1
 				},
 
@@ -179,6 +191,7 @@ function purchase() {
 					item_category: "Furniture",
 					item_variant: "White",
 					price: 49.00,
+					discount: 2.22,
 					quantity: 1
 				}
 			]
@@ -187,6 +200,7 @@ function purchase() {
 }
 
 function begincheckout() {
+	dataLayer.push({ ecommerce: null });
 	window.dataLayer = window.dataLayer || [];
 	dataLayer.push({
 		event: "begin_checkout",
@@ -218,6 +232,7 @@ function begincheckout() {
 }
 
 function viewCart() {
+	dataLayer.push({ ecommerce: null });
 	window.dataLayer = window.dataLayer || [];
 	dataLayer.push({
 		event: "view_cart",
@@ -304,4 +319,6 @@ function lead(element) {
 		lead_id: "1"
 	});
 }
+
+
 
