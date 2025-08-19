@@ -320,5 +320,22 @@ function lead(element) {
 	});
 }
 
+function eventAdobe(userInfo, itemClicado) {
+  document.DataLayer = {
+    pageInfo: {
+      url: document.location.href,
+      pageName: "teste",
+    },
+    userInfo: userInfo,
+    rule: "customLink",
+    custom: {
+      events: [
+        "cliquesGenericos"
+      ],
+      itemClicado: itemClicado,
+      customLink: "CS|CliquesGenericos"
+    }
+  };
+}
 
 
