@@ -320,19 +320,17 @@ function lead(element) {
 	});
 }
 
-function eventAdobe(userInfo, itemClicado) {
+function eventAdobe() {
   document.DataLayer = {
     pageInfo: {
       url: document.location.href,
       pageName: "teste",
     },
-    userInfo: userInfo,
     rule: "customLink",
     custom: {
       events: [
         "cliquesGenericos"
       ],
-      itemClicado: itemClicado,
       customLink: "CS|CliquesGenericos"
     }
   };
